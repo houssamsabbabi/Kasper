@@ -878,6 +878,7 @@ header .container .nav-container nav i {
     color: white;
     padding: 10px;
     font-size: 18px;
+    line-height: 0;
 }
 /* End subscribe */
 /* Start Contact */
@@ -923,7 +924,8 @@ header .container .nav-container nav i {
 }
 .contact-us-container .container .form-container form input::placeholder, 
 .contact-us-container .container .form-container form textarea::placeholder {
-    font-size: 18px;
+    font-size: 16px;
+    line-height: 0.9;
 }
 .contact-us-container .container .form-container .contact h4 {
     font-weight: normal;
