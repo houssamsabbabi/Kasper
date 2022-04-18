@@ -26,7 +26,7 @@ body {
 /* Small devices  */
 @media (min-width: 768px) { 
     .container {
-        width: 758px;
+        width: 750px;
     }
  }
 /* Medium screens */
@@ -258,36 +258,36 @@ header .container .nav-container nav i {
 }
 /* End Landing  */
 /* Start Services */
-.services-container .available-services {
+.services-container .container .available-services {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
     gap: 40px;
 }
-.available-services .services {
+.services-container .container .available-services .services {
     display: flex;
     margin-right: 20px;
 }
 @media (max-width:767px) {
-    .available-services .services {
+    .services-container .container .available-services .services {
         display: block;
     }
-    .available-services .services .logo {
+    .services-container .container .available-services .services .logo {
         text-align: center;
         margin-bottom: 20px;
     }
-    .available-services .services .text-container {
+    .services-container .container .available-services .services .text-container {
         text-align: center;
     }
 }
-.available-services .services .text-container {
+.services-container .container .available-services .services .text-container {
     margin-left: 20px;
 }
-.available-services .services .text-container h4 {
+.services-container .container .available-services .services .text-container h4 {
     color: var(--main-color);
     font-size: 20px;
     margin-bottom: 20px;
 }
-.available-services .services .text-container p {
+.services-container .container .available-services .services .text-container p {
     color: var(--third-color);
     line-height: 25px;
 }
@@ -819,7 +819,7 @@ header .container .nav-container nav i {
     position: relative;
     background-image: url(../Images/subscribe.jpeg);
     background-size: cover;
-    padding: 100px 40px;
+    padding: 100px 0px;
     color: white;
 }
 .subscribe-container::before {
@@ -844,6 +844,9 @@ header .container .nav-container nav i {
     left: 50%;
     transform: translateX(-50%);
     margin-bottom: 30px;
+    }
+    .subscribe-container .container p {
+    text-align: center;
     }
 }
 .subscribe-container form {
