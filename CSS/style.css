@@ -144,19 +144,22 @@ header .container .nav-container .search-bar {
 header .container .nav-container nav ul {
     display: none;
 }
-header .container .nav-container nav:hover ul {
+header .container .nav-container nav:hover ul, 
+header .container .nav-container nav ul:hover {
     display: block;
     position: absolute;
     left: 0;
     top: 100%;
     width: 100%;
-    background-color: rgb(0 0 0 / 50%);
+    background-color: rgb(0 0 0 / 60%);
+    z-index: 1;
 }
 header .container .nav-container nav:hover ul li {
     padding: 15px 0px;
 }
 header .container .nav-container nav:hover ul a {
     padding: 15px;
+    color: white;
 }
 header .container .nav-container nav ul li:hover {
     border-bottom: 1px solid var(--main-color);
@@ -186,7 +189,6 @@ header .container .nav-container nav i {
     height: 100%;
     background-color: rgba(0 0 0 / 60%);
 }
-
 .text {
     position: absolute;
     top: 25%;
@@ -195,7 +197,6 @@ header .container .nav-container nav i {
     padding: 50px;
     color: var(--secondary-color);
     background-color: #19c8fa80;
-    z-index: 4;
 }
 @media (max-width:767px) {
     .text {
@@ -233,26 +234,39 @@ header .container .nav-container nav i {
     }
 }
 .landing-cercles ul li {
-    position: absolute;
     list-style: none;
-    width: 25px;
-    height: 25px;
-    border-radius: 50%;
-    border: 1px solid var(--secondary-color);
+    position: absolute;
+    width: 18px;
+    height: 18px;
     bottom: 30px;
+    left: 50%;
+    border: 1px solid var(--main-color);
+    border-radius: 50%;
+    background-color: var(--main-color);
     transform: translateX(-50%);
 }
-.landing-cercles ul li:first-child {
-    left: 50%;
-    border-color: var(--main-color);
-    background-color: var(--main-color);
+.landing-cercles ul li::before {
+    content: "";
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    bottom: 0;
+    right: -30px;
+    border-radius: 50%;
+    border: 1px solid var(--secondary-color);
+    box-sizing: border-box;
 }
-.landing-cercles ul li:nth-child(2) {
-    left: 53%;
-}
-.landing-cercles ul li:nth-child(3) {
-    left: 47%;
-}
+.landing-cercles ul li::after {
+    content: "";
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    bottom: 0;
+    left: -30px;
+    border-radius: 50%;
+    border: 1px solid var(--secondary-color);
+    box-sizing: border-box;
+} 
 .services-container {
     padding: 50px 0px;
 }
@@ -915,7 +929,6 @@ header .container .nav-container nav i {
     order: 2;
 }
 .contact-us-container .container .form-container form {
-    width: calc(100% - 200px);
     max-width: 800px;
 }
 .contact-us-container .container .form-container form input, 
